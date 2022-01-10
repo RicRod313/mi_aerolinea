@@ -1,0 +1,29 @@
+.list-flights {
+    margin-top: 10%;
+}
+
+.header-list {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(76, 1, 196);
+}
+
+.ubication-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ubication-info img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.ubication-info h2 {
+    font-size: 14px;
+    color: white
+}
+
+.list-items {
+    padding: 20px;
+}
