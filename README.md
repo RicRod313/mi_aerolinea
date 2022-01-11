@@ -7,7 +7,7 @@ unicamente con el manejo del estado con Redux y almacenamiento en local storage.
 
 Para poder ejecutar el proyecto deberas tener instalado lo siguiente:
 
-NodeJS - [https://nodejs.org/en/](https://nodejs.org/en/)
+NodeJS - [Node >= 14.0.0 y npm >= 5.6](https://nodejs.org/en/)
 
 ## Scripts disponibles
 
@@ -16,7 +16,7 @@ Sobre el directorio principal o raiz, puedes ejecutar:
 ### `npm start`
 
 Ejecuta la aplicacion en el modo de desarrollo.\
-Abres [Node >= 14.0.0 y npm >= 5.6](http://localhost:3000) para verlo en tu navegador.
+Abres [http://localhost:3000](http://localhost:3000) para verlo en tu navegador.
 
 La pagina se recarga en automatico cando haces cambios en el codigo.\
 Y despliega los errores lint en la consola.
