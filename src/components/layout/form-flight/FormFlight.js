@@ -15,6 +15,7 @@ const FormFlight = () => {
   const [isSetterD, setIsSetterD] = useState(true)
   const [displayO, setDisplayO] = useState(false)
   const [displayD, setDisplayD] = useState(false)
+  const [isEnable, setIsEnable] = useState(true)
 
   const [search1, setSearch1] = useState("")
   const [search2, setSearch2] = useState("")
@@ -40,12 +41,25 @@ const FormFlight = () => {
     },
   });
 
+  const validateFields = () => {
+    if(
+      formik.values.idOrigin !== "" &&
+      formik.values.idDestiny !== "" &&
+      formik.values.origin !== "" &&
+      formik.values.destiny !== "" &&
+      formik.values.date !== ""
+      ){
+        setIsEnable(false)
+    }else{ setIsEnable(true)}
+  }
+
   const handleChange = () => {
     formik.values.idOrigin = idCodeO
     formik.values.idDestiny = idCodeD
     formik.values.origin = search1
     formik.values.destiny = search2
     formik.values.date = startDate
+    validateFields()
   }
 
   const loadAirports1 = (text) => {
@@ -90,16 +104,16 @@ const FormFlight = () => {
     setIsSetterO(false)
     setSearch1(airportTxt)
     setIdCodeO(code)
-    handleChange()
     setDisplayO(false)
+    handleChange()
   }
 
   const selectDestiny = (airportTxt, code) => {
     setIsSetterD(false)
     setSearch2(airportTxt)
     setIdCodeD(code)
-    handleChange()
     setDisplayD(false)
+    handleChange()
   }
 
   return (
@@ -176,7 +190,7 @@ const FormFlight = () => {
             />
           </div>
           <div className="cont-input">
-            <button className="btn-form" type="submit">Buscar</button>
+            <button className={isEnable ? "btn-form-inactive" : "btn-form" } disabled={isEnable} type="submit">Buscar</button>
           </div>
         </form>
       </div>

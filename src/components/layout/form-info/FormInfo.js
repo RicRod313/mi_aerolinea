@@ -172,7 +172,7 @@ const FormInfo = () => {
                     />
                 </div>
                 <div className="input-container">
-                    <button type="submit">Pagar</button>
+                    <button className={!formik.dirty ? "btn-form-inactive" : "btn-form"} disabled={!formik.dirty} type="submit">Pagar</button>
                 </div>
             </form>
             <div className="data-info2">
