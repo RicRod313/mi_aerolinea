@@ -35,7 +35,6 @@ const FormInfo = () => {
                     info: values
                 }
                 dispatch(OrderAction.setOrder(order))
-                console.log(order)
                 navigate(`/mi_aerolinea/finish/${order.id}`)
                 dispatch(CartAction.clearCart())
             }else{

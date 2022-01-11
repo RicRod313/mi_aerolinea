@@ -8,7 +8,6 @@ const PrivateRoute = ({component: Component}) => {
     let params = useParams();
     const dispatch = useDispatch();
     const orders = useSelector((state) => state.orders)
-    console.log(params.orderId)
     useEffect(() => {
         dispatch(OrderAction.getOrder(params.orderId))
     },[dispatch, params])

@@ -8,7 +8,6 @@ const CountriesReducer = (state = initialState, action) => {
     const res = action.payload;
     switch (action.type) {
         case GET_COUNTRIES :
-            console.log(res)
             return {
                 ...initialState,
                 data: res
