@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mi_aerolinea/static/css/main.d0fff572.css",
-    "main.js": "/mi_aerolinea/static/js/main.2ef9b1cf.js",
+    "main.js": "/mi_aerolinea/static/js/main.3c3a7775.js",
     "static/js/787.3e0c5431.chunk.js": "/mi_aerolinea/static/js/787.3e0c5431.chunk.js",
     "static/media/aeromexico-logo.png": "/mi_aerolinea/static/media/aeromexico-logo.d19ed30644c55df44d3d.png",
     "static/media/codigo.jpeg": "/mi_aerolinea/static/media/codigo.985bb8018ff9af15ade7.jpeg",
@@ -9,11 +9,11 @@
     "static/media/delta-logo.png": "/mi_aerolinea/static/media/delta-logo.bf850eb12dae22fab14a.png",
     "index.html": "/mi_aerolinea/index.html",
     "main.d0fff572.css.map": "/mi_aerolinea/static/css/main.d0fff572.css.map",
-    "main.2ef9b1cf.js.map": "/mi_aerolinea/static/js/main.2ef9b1cf.js.map",
+    "main.3c3a7775.js.map": "/mi_aerolinea/static/js/main.3c3a7775.js.map",
     "787.3e0c5431.chunk.js.map": "/mi_aerolinea/static/js/787.3e0c5431.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d0fff572.css",
-    "static/js/main.2ef9b1cf.js"
+    "static/js/main.3c3a7775.js"
   ]
 }
