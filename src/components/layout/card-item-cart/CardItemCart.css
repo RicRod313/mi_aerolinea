@@ -43,20 +43,24 @@
 
 .card-info {
     padding: 5px;
+    width: 100%;
 }
 
-.item-hour h3 {
+.item-hour h4 {
     font-size: 14px;
+    text-align: start;
 }
 
 .item-type h5 {
     font-size: 12px;
     font-weight: normal;
+    text-align: start;
 }
 
 .item-person h5 {
     font-size: 12px;
     font-weight: normal;
+    text-align: start;
 }
 
 .item-persons {
@@ -64,21 +68,23 @@
 }
 
 .item-persons h5 {
-    text-align: center;
+    text-align: start;
+    padding-left: 20px;
 }
 
 .item-airline h4 {
+    text-align: start;
     font-size: 12px;
     font-weight: normal;
 }
 
 .item-price {
     width: 100%;
-    text-align: end;
 }
 
 .item-price h3 {
     font-size: 15px;
+    text-align: start;
 }
 
 .card-logo img {

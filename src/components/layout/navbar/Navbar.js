@@ -7,11 +7,11 @@ const Navbar = (props) => {
     return (
         <header className="header">
             <div className="logo-container">
-                <Link to="/">
+                <Link to="/mi_aerolinea/">
                     <img src={logo} alt="" className="imgLogo"/>
                 </Link>
                 <h1>
-                    <Link to="/" className="logo">
+                    <Link to="/mi_aerolinea/" className="logo">
                         Mi Aerolínea
                     </Link>
                 </h1>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import {
     Routes,
     Route
@@ -13,15 +14,18 @@ import FinishPage from 'pages/finish/FinishPage'
 
 
 const RoutesMain = () => {
+
+  const cart = useSelector((state) => state.cart)
+
     return (
         <div className="container">
           <Routes>
             { /* HomePage */ }
-            <Route path="/" element={ <HomePage /> } />
+            <Route path="/mi_aerolinea/" element={ <HomePage /> } />
             { /* CheckoutPage */ }
-            <Route path="/checkout" element={ <CheckoutPage /> } />
+            <Route path="/mi_aerolinea/checkout" element={ JSON.stringify(cart.data) !== '{}' ? <CheckoutPage /> : <HomePage /> } />
             { /* FinishPage */ }
-            <Route path="/finish/:orderId" element={<PrivateRoute component={ FinishPage } />} />
+            <Route path="/mi_aerolinea/finish/:orderId" element={<PrivateRoute component={ FinishPage } />} />
           </Routes>
         </div>
     )

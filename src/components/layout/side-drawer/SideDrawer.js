@@ -5,11 +5,11 @@ import { toast } from 'react-toastify';
 
 import Cart from '../cart/Cart'
 
+import CartAction from 'redux/actions/cart/CartAction';
 import OrderAction from 'redux/actions/orders/OrdersAction';
 
 import Back from 'assets/icons/back.png'
 import './SideDrawer.css'
-import CartAction from 'redux/actions/cart/CartAction';
 
 const SideDrawer = (props) => {
 
@@ -24,9 +24,9 @@ const SideDrawer = (props) => {
     },
     onSubmit: values => {
       dispatch(OrderAction.getOrder(values.orderId))
-      if(orders.search != null){
+      if(orders.search !== null){
         props.onClose()
-        navigate(`/finish/:${values.orderId}`)
+        navigate(`/mi_aerolinea/finish/${values.orderId}`)
       }else{
         toast.error("La orden ingresada no existe", {
           position: toast.POSITION.BOTTOM_CENTER
@@ -42,12 +42,32 @@ const SideDrawer = (props) => {
   const goToCheckout = () => {
     if(JSON.stringify(cart.data) !== '{}'){
       props.onClose()
-      navigate("/checkout")
+      navigate("/mi_aerolinea/checkout")
     }else{
       toast.error("No hay boletos por comprar", {
         position: toast.POSITION.BOTTOM_CENTER
       })
     }
+  }
+
+  const getBoletos = () => {
+    let count = 0
+    if(JSON.stringify(cart.data) !== '{}'){
+      cart.data.items.forEach(item => {
+        count += item.dataForm.persons
+      })
+    }
+    return count
+  }
+
+  const getTotal = () => {
+    let count = 0
+    if(JSON.stringify(cart.data) !== '{}'){
+      cart.data.items.forEach(item => {
+        count += item.dataForm.persons * item.dataItem.price
+      })
+    }
+    return count
   }
 
   return (
@@ -65,6 +85,16 @@ const SideDrawer = (props) => {
         <div className="side-container-cart">
           <Cart />
         </div>
+        <div className="data-info">
+          <div className="data-row">
+            <h5>Boletos Totales:</h5>
+            <h5>{getBoletos()}</h5>
+          </div>
+          <div className="data-row">
+            <h5>Monto Toltal:</h5>
+            <h5>${getTotal()}.00</h5>
+          </div>
+        </div>
         <div className="btn-clear">
           <span onClick={() => clearCart()}>Limpiar boletos</span>
         </div>
@@ -72,9 +102,10 @@ const SideDrawer = (props) => {
           <button type="button" onClick={() => goToCheckout()}>Finalizar Compra</button>
         </div>
         <form action="" className="search-order" onSubmit={formik.handleSubmit} >
-          <label htmlFor="buscar">Buscador de ordenes</label>
+          <label htmlFor="orderId">Buscador de ordenes</label>
           <div className="search-input">
             <input
+              id="orderId"
               placeholder="Orden..."
               value={formik.values.orderId}
               onChange={formik.handleChange}

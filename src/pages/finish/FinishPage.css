@@ -1,0 +1,89 @@
+.finish-page {
+
+}
+
+.finish-info {
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+}
+
+.banner-title {
+    width: 100%;
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+}
+
+.banner-title img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-info {
+    position: absolute;
+}
+
+.banner-info h3 {
+    font-size: 15vw;
+    color: white;
+}
+
+.banner-info p {
+    margin-top: 5px;
+    font-size: 5vw;
+    color: white;
+}
+
+.info-content {
+    width: 100%;
+}
+
+.message-final {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.message-final p {
+    font-size: 5vw;
+    font-style: italic;
+}
+
+.finish-items {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn-finish {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-finish button {
+    width: 50%;
+    max-width: 800px;
+    height: 40px;
+    margin: 20px;
+    padding: 5px;
+    transition: .3s ease all;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.btn-finish button:hover {
+    background-color: #55e45a;
+    color: white;
+    border: 2px solid #4CAF50;
+}

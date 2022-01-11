@@ -1,23 +1,38 @@
-.form-container {
+.formulario-container-info {
+	position: static;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.formulario {
-	margin-top: 5%;
-	max-width: 600px;
-	background: lightblue;
-	border-radius: 5px;
-	padding: 20px;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-.formulario > div {
+	flex-direction: column;
 	margin-bottom: 20px;
 }
 
-.formulario label {
+.formulario-info {
+	margin-top: 5%;
+	padding: 15px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	flex-direction: column;
+}
+
+.formulario-info > div {
+	margin-bottom: 10px;
+}
+
+.input-container {
+	width: 90%;
+	max-width: 800px;
+}
+
+.row-numbers {
+	width: 90%;
+	max-width: 800px;
+	display: flex;
+	align-items: center;
+}
+
+.formulario-info label {
 	display: block;
 	font-weight: 600;
 	font-size: 14px;
@@ -25,32 +40,24 @@
 	color: #1f1f1f;
 }
 
-.formulario input,
-.formulario textarea {
+.formulario-info input {
 	font-family: 'Open Sans', sans-serif;
 	width: 100%;
 	border-radius: 5px;
 	border: 2px solid #e2e2e2;
-	font-size: 18px;
-	padding: 10px;
+	font-size: 16px;
+	padding: 5px;
 	margin-bottom: 5px;
 	color: #1f1f1f;
 }
-
-.formulario input:focus {
+.formulario-info input:focus {
 	outline: none;
 	border: 2px solid #0085FF;
 }
 
-.formulario .error {
-	color: #e92b2d;
-	font-weight: 600;
-	font-size: 12px;
-}
-
-.formulario button[type="submit"] {
+.formulario-info button[type="submit"] {
 	display: block;
-	background: #0085FF;
+	background: #4CAF50;
 	font-weight: 600;
 	font-family: 'Open Sans', sans-serif;
 	border: none;
@@ -63,17 +70,33 @@
 	transition: .3s ease all;
 }
 
-.formulario button[type="submit"]:hover {
-	background: #0051ff;
+.formulario-info button[type="submit"]:hover {
+	background-color: #55e45a;
+    color: white;
+    border: 2px solid #4CAF50;
 }
 
-.formulario .exito {
-	text-align: center;
-	font-size: 14px;
-	padding-top: 20px;
-	color: #02a802;
+.data-info2 {
+	padding: 10px;
+	width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	background-color: rgb(12, 98, 197);
 }
 
-.formulario input[type="radio"] {
-	width: auto;
+.data-row {
+    margin: 10px;
+    width: 100%;
+	max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-row h5 {
+    width: 100%;
+    color: white;
+    text-align: center;
 }

@@ -5,7 +5,7 @@
 .header-list {
     width: 100%;
     padding: 10px;
-    background-color: rgb(76, 1, 196);
+    background-color: rgb(12, 98, 197);
 }
 
 .ubication-info {
@@ -26,4 +26,8 @@
 
 .list-items {
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

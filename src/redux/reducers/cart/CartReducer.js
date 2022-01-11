@@ -26,14 +26,18 @@ const CartReducer = (state = initialState, action) => {
             };
         case ADD_CART :
             if(cartStr){
+                let isInCart = false
                 cart = JSON.parse(cartStr)
                 cart.items.map((it) => {
                     if(it.id === res.id){
+                        isInCart = true
                         it.dataForm.persons = it.dataForm.persons + res.dataForm.persons
                     }
                     return it
                 })
-                cart.items.push(res)
+                if(!isInCart){
+                    cart.items.push(res)
+                }
                 localStorage.setItem(DATA_CART, JSON.stringify(cart))
             }else{
                 cart = {items: []}
@@ -48,6 +52,7 @@ const CartReducer = (state = initialState, action) => {
             if(cartStr){
                 cart = JSON.parse(cartStr)
                 cart.items = cart.items.filter(it => it.id !== res.id)
+                console.log(cart)
                 localStorage.setItem(DATA_CART, JSON.stringify(cart))
             }
             return {

@@ -1,0 +1,11 @@
+.message-none-Items {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.message-none-Items h2 {
+    color: rgb(0, 44, 70);
+}
